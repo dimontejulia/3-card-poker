@@ -8,7 +8,10 @@ const userInput = function () {
   rl.on("line", (line) => {
     lines.push(line);
   }).on("close", () => {
-    gameControl(parseInput(lines));
+    const parsedInput = parseInput(lines);
+    if (parsedInput) {
+      gameControl(parsedInput);
+    }
   });
 };
 
@@ -22,7 +25,7 @@ const parseInput = function (input) {
     }
     return playerCards;
   }
-  console.log("invalid number of players");
+  console.log(`${numPlayers} is an invalid number of players.`);
 };
 
 const straight = function (cards) {
