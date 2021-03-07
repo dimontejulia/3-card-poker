@@ -1,6 +1,7 @@
 # 3 Card Poker Game
 
-This 3 card poker game was written with javascript. All code can be found in the file `pokerGame.js`. To run tests run the following command:
+This 3 card poker game was written with javascript. All code can be found in the file `pokerGame.js`.
+To run tests run the following command:
 `python3 ./run_tests "node pokerGame.js"`
 
 ## Tests
