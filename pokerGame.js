@@ -22,7 +22,7 @@ const userInput = function () {
   });
 };
 
-//parse through input to make sure values are valid
+//parse through input to make sure all values are valid
 //add values to an object for gameplay
 const parseInput = function (input) {
   const numPlayers = input.shift();
@@ -38,6 +38,7 @@ const parseInput = function (input) {
         playerCards.push({ id: vals.shift(), cards: vals, score: 0 });
       }
     }
+    //ensure number of cards and number of players match
     if (playerCards.length == numPlayers) {
       return playerCards;
     } else {
@@ -45,6 +46,7 @@ const parseInput = function (input) {
         "Number of players and number of cards hand given do not match."
       );
     }
+    //error handling for invalid input
   } else {
     console.log(`${numPlayers} is an invalid number of players.`);
   }
