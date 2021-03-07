@@ -21,7 +21,11 @@ const parseInput = function (input) {
     let playerCards = [];
     for (let line of input) {
       const vals = line.split(" ");
-      playerCards.push({ id: vals.shift(), cards: vals, score: 0 });
+      if (vals.length !== 4) {
+        return console.log("Invalid number of cards given.");
+      } else {
+        playerCards.push({ id: vals.shift(), cards: vals, score: 0 });
+      }
     }
     return playerCards;
   }
