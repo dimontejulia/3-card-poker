@@ -4,6 +4,12 @@ This 3 card poker game was written with javascript. All code can be found in the
 To run tests run the following command:
 `python3 ./run_tests "node pokerGame.js"`
 
+The program was written in 3 main parts:
+
+1. Input related functions to parse and validate user inputs
+2. Different types of hand validators (eg. straight, flush)
+3. Game controller to rank player hands and output winners
+
 ## Tests
 
 Test cases in the "tests" folder:
