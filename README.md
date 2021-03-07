@@ -19,6 +19,8 @@ Test cases in the "tests" folder:
 9. 0 players
 10. Over 24 players
 11. Invalid number of cards given (2 cards)
+12. More cards given than the amount of players
+13. Less cards given than the amount of players
 
 # Rules
 

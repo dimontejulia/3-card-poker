@@ -38,9 +38,16 @@ const parseInput = function (input) {
         playerCards.push({ id: vals.shift(), cards: vals, score: 0 });
       }
     }
-    return playerCards;
+    if (playerCards.length == numPlayers) {
+      return playerCards;
+    } else {
+      console.log(
+        "Number of players and number of cards hand given do not match."
+      );
+    }
+  } else {
+    console.log(`${numPlayers} is an invalid number of players.`);
   }
-  console.log(`${numPlayers} is an invalid number of players.`);
 };
 
 //main game function
@@ -155,4 +162,5 @@ const getWinner = function (winningPlayer) {
   }
 };
 
+//program starts with a call to fetch user input
 userInput();
